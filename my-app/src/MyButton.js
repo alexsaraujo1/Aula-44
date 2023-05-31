@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export default function MyButton({ name }) {
   function handleClick() {
-    alert(name + "clicou no botão");
+    alert(name + " clicou no botão");
   }
 
   return <button onClick={handleClick}> Click Me! </button>;
@@ -16,4 +16,8 @@ export function ButtonCounter() {
   }
 
   return <button onClick={handleCounter}> Contador: {count} </button>;
+}
+
+export function SharedCounter({ count, handleCounterProps }) {
+  return <button onClick={handleCounterProps}>Contador: {count}</button>;
 }
